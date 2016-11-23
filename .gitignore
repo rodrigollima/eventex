@@ -95,3 +95,4 @@ ENV/
 .wttd
 *.sqlite3
 *pyc
+staticfiles
