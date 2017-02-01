@@ -28,3 +28,8 @@ class SubscriptionDetaiGet(TestCase):
         with self.subTest():
             for expected in contents:
                 self.assertContains(self.resp, expected)
+
+class SubscriptionDetailNotFound(TestCase):
+    def test_not_found(self):
+        resp = self.client.get('/inscricao/0/')
+        self.assertEqual(404, resp.status_code)
